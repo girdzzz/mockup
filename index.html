@@ -1,239 +1,187 @@
 <!DOCTYPE html>
-<html lang="de">
-
+<html lang="en">
 <head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Lara W goes Lara L</title>
 
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    body {
+      margin: 0;
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      overflow: hidden;
+      font-family: Arial, sans-serif;
+      transition: background-color 0.5s ease;
+    }
 
-<title>Lara W goes Lara L</title>
+    img {
+      max-width: 90vw;
+      max-height: 60vh;
+      border-radius: 20px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.25);
+    }
 
-<link rel="stylesheet" href="style.css">
+    .button {
+      margin-top: 24px;
+      padding: 16px 28px;
+      font-size: 18px;
+      border-radius: 999px;
+      text-decoration: none;
+      background: black;
+      color: white;
+      font-weight: bold;
+    }
 
+      /* POPUP */
+
+    .popup-overlay {
+      display: none;
+      position: fixed;
+      inset: 0;
+      background: rgba(0,0,0,0.6);
+      justify-content: center;
+      align-items: center;
+      z-index: 10;
+    }
+
+
+    .popup {
+      background: white;
+      width: 85vw;
+      max-width: 400px;
+      padding: 25px;
+      border-radius: 25px;
+      text-align: center;
+      box-shadow: 0 10px 40px rgba(0,0,0,0.3);
+    }
+
+
+    .popup img {
+      width: 100%;
+      max-height: 250px;
+      object-fit: cover;
+      margin: 15px 0;
+    }
+
+
+    .popup-buttons {
+      display: flex;
+      gap: 10px;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+
+    .popup button {
+      padding: 12px 18px;
+      border-radius: 999px;
+      border: none;
+      background: black;
+      color: white;
+      cursor: pointer;
+      font-weight: bold;
+    }
+      
+  </style>
 </head>
-
-
+    
 <body>
 
+  <img id="randomImage" src="" alt="Random Image" />
 
-<!-- ORIGINAL STARTSCREEN -->
+  <!-- geändert: kein Paypal mehr -->
+  <button class="button" onclick="openPopup()">
+    HILFE
+  </button>
 
-<section id="startScreen">
+  <!-- POPUP -->
 
-    <img 
-        id="randomImage"
-        src=""
-        alt="JGA Bild"
-    >
+  <div class="popup-overlay" id="helpPopup">
 
+    <div class="popup">
 
-    <button 
-        class="button"
-        onclick="openHelp()"
-    >
-        HILFE
-    </button>
+      <h2>
+        Danke aber der Button ist mittlerweile deaktiviert...
+      </h2>
 
-</section>
+      <p>
+        Er führte zu einem PayPal-Pool, wo wir über 800€ gesammelt haben. 
+        Danke an alle Spenderinnen und Spender, das Geld wurde sehr sorgsam investiert.
+      </p>
 
 
+      <img src="images/paypal.jpg" alt="Geheimes Bild">
 
 
-<!-- POPUP -->
+      <div class="popup-buttons">
 
-<div 
-id="helpPopup"
-class="overlay"
->
+        <button onclick="location.reload()">
+          Zeig ein neues Meme
+        </button>
 
 
-<div class="popup">
+        <button onclick="closePopup()">
+          OK, lass mich weiterlesen
+        </button>
 
+      </div>
 
-<h2>
-    Dieser Button ist mittlerweile deaktiviert...
-</h2>
+    </div>
 
+  </div>
 
-<p>
-    Er führte zu einem PayPal Spendenpool, wo wir über 800€ gesammelt haben. Vielen Dank an alle Spenderinnen und Spender, das Geld wurde sehr sorgfältig investiert.
-    Spaßfaktor dieser Proxywebseite: Bei jedem Neuladen der Seite wurde ein randomisiertes Meme ausgespuckt.
-</p>
 
+  <script>
+    const colors = [
+      "#FFB3BA",
+      "#BAFFC9",
+      "#BAE1FF",
+      "#FFFFBA",
+      "#D5BAFF",
+      "#FFC6A5"
+    ];
 
-<img 
-src="images/hilfe-popup.jpg"
-class="popup-image"
->
+    const images = [
+      "images/gib20.png",
+      "images/mircostripper.png",
+      "images/BrustOP.png",
+      "images/COCKtail.png",
+      "images/dubisteingeladen.png",
+      "images/wuhu.png",
+      "images/brautstyling.png",
+      "images/shotspende.png",
+      "images/braut1.jpeg",
+      "images/braut2.jpeg",
+      "images/braut3.jpeg",
+      "images/braut4.jpeg",
+      "images/braut5.jpeg",
+      "images/braut6.jpeg",
+      "images/braut7.jpeg"
+    ];
 
+    const randomColor =
+      colors[Math.floor(Math.random() * colors.length)];
 
-<div class="popup-buttons">
+    const randomImage =
+      images[Math.floor(Math.random() * images.length)];
 
+    document.body.style.backgroundColor = randomColor;
 
-<button 
-onclick="reloadPage()"
->
-Glaube ich nicht, lad die Seite neu
-</button>
+    document.getElementById("randomImage").src = randomImage;
 
+    function openPopup() {
+      document.getElementById("helpPopup").style.display = "flex";
+    }
 
-
-<button 
-onclick="showStory()"
->
-OK, glaube ich, lass mich weiterlesen
-</button>
-
-
-</div>
-
-
-</div>
-
-
-</div>
-
-
-
-
-
-
-<!-- STORY -->
-
-<section id="story">
-
-
-<h1>
-📸 Die geheimen JGA-Akten
-</h1>
-
-
-<p class="intro">
-
-Du dachtest wirklich, der Button wäre
-für eine Spende?
-
-Leider falsch. 😄
-
-Hier sind die Beweise.
-
-</p>
-
-
-
-
-
-<div class="chapter">
-
-
-<h2>
-🍻 Kapitel 1 - Der Anfang
-</h2>
-
-
-<p>
-
-Alles begann ganz harmlos.
-Zumindest haben wir das behauptet.
-
-</p>
-
-
-<div class="gallery">
-
-<img src="images/braut1.jpeg">
-
-<img src="images/braut2.jpeg">
-
-</div>
-
-
-</div>
-
-
-
-
-
-
-
-
-<div class="chapter">
-
-
-<h2>
-🤯 Kapitel 2 - Die Eskalation
-</h2>
-
-
-<p>
-
-Ab hier wurde es schwierig,
-alles zu dokumentieren.
-
-</p>
-
-
-<div class="gallery">
-
-<img src="images/gib20.png">
-
-<img src="images/COCKtail.png">
-
-</div>
-
-
-</div>
-
-
-
-
-
-
-
-<div class="chapter">
-
-
-<h2>
-❤️ Kapitel 3 - Für unsere Braut
-</h2>
-
-
-<p>
-
-Spaß beiseite:
-
-Wir wollten dir einfach zeigen,
-wie viel Spaß wir zusammen hatten.
-
-</p>
-
-
-<img 
-class="final-image"
-src="images/braut3.jpeg"
->
-
-
-<h2>
-Wir wünschen euch beiden
-alles Glück der Welt ❤️
-</h2>
-
-
-</div>
-
-
-
-
-</section>
-
-
-
-
-
-<script src="script.js"></script>
-
+    function closePopup() {
+      document.getElementById("helpPopup").style.display = "none";
+    }
+      
+  </script>
 
 </body>
-
 </html>
