@@ -1,116 +1,157 @@
 <!DOCTYPE html>
 <html lang="de">
+
 <head>
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Der geheime JGA</title>
+<title>Lara W goes Lara L</title>
 
 <link rel="stylesheet" href="style.css">
+
 </head>
+
 
 <body>
 
-<section class="hero">
 
-    <div class="hero-card">
+<!-- ORIGINAL STARTSCREEN -->
 
-        <img id="heroImage" class="hero-image">
+<section id="startScreen">
 
-        <h1 id="heroTitle">
-            Du glaubst das nicht?
-        </h1>
-
-        <p id="heroText">
-            Lade die Seite einfach ein paar Mal neu...
-        </p>
+    <img 
+        id="randomImage"
+        src=""
+        alt="JGA Bild"
+    >
 
 
-        <button onclick="openPopup()" class="fake-button">
-            💸 Spenden
-        </button>
-
-    </div>
+    <button 
+        class="button"
+        onclick="openHelp()"
+    >
+        HILFE
+    </button>
 
 </section>
 
 
-<div id="popup" class="popup">
 
-    <div class="popup-box">
 
-        <h2>😂 Erwischt!</h2>
+<!-- POPUP -->
 
-        <p>
-        Dieser Button wurde von den Trauzeugen deaktiviert.
-        </p>
+<div 
+id="helpPopup"
+class="overlay"
+>
 
-        <p>
-        Heute gibt es keine Spenden.
-        Heute gibt es nur Beweise. 😇
-        </p>
 
-        <button onclick="closePopup()">
-            Weiter zum JGA
-        </button>
+<div class="popup">
 
-    </div>
+
+<h2>
+    Dieser Button ist mittlerweile deaktiviert...
+</h2>
+
+
+<p>
+    Er führte zu einem PayPal Spendenpool, wo wir über 800€ gesammelt haben. Vielen Dank an alle Spenderinnen und Spender, das Geld wurde sehr sorgfältig investiert.
+    Spaßfaktor dieser Proxywebseite: Bei jedem Neuladen der Seite wurde ein randomisiertes Meme ausgespuckt.
+</p>
+
+
+<img 
+src="images/hilfe-popup.jpg"
+class="popup-image"
+>
+
+
+<div class="popup-buttons">
+
+
+<button 
+onclick="reloadPage()"
+>
+Glaube ich nicht, lad die Seite neu
+</button>
+
+
+
+<button 
+onclick="showStory()"
+>
+OK, glaube ich, lass mich weiterlesen
+</button>
+
+
+</div>
+
+
+</div>
+
 
 </div>
 
 
 
-<section class="story">
 
-<h2>📸 Die streng geheimen JGA-Akten</h2>
 
-<p>
-Eigentlich sollte es ein ganz normaler Tag werden...
+
+<!-- STORY -->
+
+<section id="story">
+
+
+<h1>
+📸 Die geheimen JGA-Akten
+</h1>
+
+
+<p class="intro">
+
+Du dachtest wirklich, der Button wäre
+für eine Spende?
+
+Leider falsch. 😄
+
+Hier sind die Beweise.
+
 </p>
+
+
+
 
 
 <div class="chapter">
 
-<h3>🍻 Kapitel 1: Der Anfang</h3>
+
+<h2>
+🍻 Kapitel 1 - Der Anfang
+</h2>
+
 
 <p>
-Alle waren motiviert. Manche mehr, manche weniger.
-Aber alle waren überzeugt:
-Das wird ein legendärer Tag.
+
+Alles begann ganz harmlos.
+Zumindest haben wir das behauptet.
+
 </p>
 
 
 <div class="gallery">
 
-<img src="images/kapitel1-1.jpg">
-<img src="images/kapitel1-2.jpg">
+<img src="images/braut1.jpeg">
+
+<img src="images/braut2.jpeg">
 
 </div>
 
-</div>
-
-
-
-
-<div class="chapter">
-
-<h3>🎯 Kapitel 2: Die ersten Herausforderungen</h3>
-
-<p>
-Hier kommt eure Geschichte rein.
-Was musste der Bräutigam machen?
-Welche Aufgaben gab es?
-</p>
-
-
-<div class="gallery">
-
-<img src="images/kapitel2-1.jpg">
-<img src="images/kapitel2-2.jpg">
 
 </div>
 
-</div>
+
+
 
 
 
@@ -118,19 +159,29 @@ Welche Aufgaben gab es?
 
 <div class="chapter">
 
-<h3>🤯 Kapitel 3: Jetzt wurde es kritisch</h3>
+
+<h2>
+🤯 Kapitel 2 - Die Eskalation
+</h2>
+
 
 <p>
-Ab diesem Moment gab es kein Zurück mehr.
+
+Ab hier wurde es schwierig,
+alles zu dokumentieren.
+
 </p>
 
 
 <div class="gallery">
 
-<img src="images/kapitel3-1.jpg">
+<img src="images/gib20.png">
+
+<img src="images/COCKtail.png">
 
 </div>
 
+
 </div>
 
 
@@ -138,36 +189,51 @@ Ab diesem Moment gab es kein Zurück mehr.
 
 
 
-<section class="final">
 
-<h2>❤️ Liebe Braut</h2>
+<div class="chapter">
+
+
+<h2>
+❤️ Kapitel 3 - Für unsere Braut
+</h2>
+
 
 <p>
-Falls du dich gefragt hast, was an diesem Tag passiert ist:
-Hier ist die Antwort.
+
+Spaß beiseite:
+
+Wir wollten dir einfach zeigen,
+wie viel Spaß wir zusammen hatten.
+
 </p>
 
-<p>
-Wir hatten unglaublich viel Spaß und wollten dir
-ein kleines Stück davon schenken.
-</p>
+
+<img 
+class="final-image"
+src="images/braut3.jpeg"
+>
 
 
-<img src="images/finale.jpg">
+<h2>
+Wir wünschen euch beiden
+alles Glück der Welt ❤️
+</h2>
 
 
-<h3>
-Wir wünschen euch beiden alles Glück der Welt ❤️
-</h3>
+</div>
+
+
 
 
 </section>
 
 
-</section>
+
 
 
 <script src="script.js"></script>
 
+
 </body>
+
 </html>
