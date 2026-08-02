@@ -59,3 +59,57 @@ function continueStory(){
   });
 }
 
+function launchConfetti() {
+
+  const container =
+      document.getElementById("confetti-container");
+
+  const symbols = [
+    "❤️",
+    "💕",
+    "🎉",
+    "✨",
+    "💍"
+  ];
+
+  for(let i = 0; i < 40; i++) {
+
+    const item =
+        document.createElement("div");
+
+    item.className="confetti";
+
+    item.innerHTML =
+        symbols[
+            Math.floor(Math.random()*symbols.length)
+            ];
+
+    item.style.left =
+        Math.random()*100 + "%";
+
+    item.style.animationDelay =
+        Math.random()*1.5 + "s";
+
+    container.appendChild(item);
+
+    setTimeout(()=>{
+      item.remove();
+    },4000);
+  }
+}
+
+const finalChapter =
+    document.getElementById("finalChapter");
+
+const observer =
+    new IntersectionObserver((entries)=>{
+      entries.forEach(entry=>{
+        if(entry.isIntersecting){
+          launchConfetti();
+          observer.disconnect();
+        }
+      });
+    }, {
+      threshold:0.5
+    });
+observer.observe(finalChapter);
