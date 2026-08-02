@@ -36,7 +36,7 @@ function openPopup() {
 }
 
 function continueStory(){
-  document.getElementById("popup").style.display="none";
+  document.getElementById("helpPopup").style.display="none";
   document.getElementById("startScreen").style.display="none";
   document.getElementById("story").style.display="block";
   window.scrollTo({
