@@ -1,128 +1,47 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="de">
+
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Lara W goes Lara L</title>
 
-  <style>
-    body {
-      margin: 0;
-      height: 100vh;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      overflow: hidden;
-      font-family: Arial, sans-serif;
-      transition: background-color 0.5s ease;
-    }
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    img {
-      max-width: 90vw;
-      max-height: 60vh;
-      border-radius: 20px;
-      box-shadow: 0 10px 30px rgba(0,0,0,0.25);
-    }
+<title>Lara W goes Lara L</title>
 
-    .button {
-      margin-top: 24px;
-      padding: 16px 28px;
-      font-size: 18px;
-      border-radius: 999px;
-      text-decoration: none;
-      background: black;
-      color: white;
-      font-weight: bold;
-    }
+<link rel="stylesheet" href="style.css">
 
-      /* POPUP */
-
-    .popup-overlay {
-      display: none;
-      position: fixed;
-      inset: 0;
-      background: rgba(0,0,0,0.6);
-      justify-content: center;
-      align-items: center;
-      z-index: 10;
-    }
-
-
-    .popup {
-      background: white;
-      width: 85vw;
-      max-width: 400px;
-      padding: 25px;
-      border-radius: 25px;
-      text-align: center;
-      box-shadow: 0 10px 40px rgba(0,0,0,0.3);
-    }
-
-
-    .popup img {
-      width: 100%;
-      max-height: 250px;
-      object-fit: cover;
-      margin: 15px 0;
-    }
-
-
-    .popup-buttons {
-      display: flex;
-      gap: 10px;
-      justify-content: center;
-      flex-wrap: wrap;
-    }
-
-
-    .popup button {
-      padding: 12px 18px;
-      border-radius: 999px;
-      border: none;
-      background: black;
-      color: white;
-      cursor: pointer;
-      font-weight: bold;
-    }
-      
-  </style>
 </head>
-    
+
 <body>
 
-  <img id="randomImage" src="" alt="Random Image" />
+<!-- START -->
 
-  <!-- geändert: kein Paypal mehr -->
-  <button class="button" onclick="openPopup()">
-    HILFE
-  </button>
+<section id="startScreen">
+<img id="randomImage">
+<button class="button" onclick="openPopup()">HILFE</button>
 
-  <!-- POPUP -->
+<!-- POPUP -->
 
-  <div class="popup-overlay" id="helpPopup">
+<div class="popup-overlay" id="helpPopup">
 
-    <div class="popup">
+  <div class="popup">
 
-      <h2>
-        Danke aber der Button ist mittlerweile deaktiviert...
-      </h2>
+    <h2>
+      Danke aber der Button ist mittlerweile deaktiviert...
+    </h2>
 
       <p>
         Er führte zu einem PayPal-Pool, wo wir über 800€ gesammelt haben. 
         Danke an alle Spenderinnen und Spender, das Geld wurde sehr sorgsam investiert.
       </p>
 
-
       <img src="imagesout/paypal.png" alt="paypal">
-
 
       <div class="popup-buttons">
 
         <button onclick="location.reload()">
           Zeig ein neues Meme
         </button>
-
 
         <button onclick="closePopup()">
           OK, lass mich weiterlesen
@@ -135,53 +54,73 @@
   </div>
 
 
-  <script>
-    const colors = [
-      "#FFB3BA",
-      "#BAFFC9",
-      "#BAE1FF",
-      "#FFFFBA",
-      "#D5BAFF",
-      "#FFC6A5"
-    ];
+<!-- STORY -->
 
-    const images = [
-      "images/gib20.png",
-      "images/mircostripper.png",
-      "images/BrustOP.png",
-      "images/COCKtail.png",
-      "images/dubisteingeladen.png",
-      "images/wuhu.png",
-      "images/brautstyling.png",
-      "images/shotspende.png",
-      "images/braut1.jpeg",
-      "images/braut2.jpeg",
-      "images/braut3.jpeg",
-      "images/braut4.jpeg",
-      "images/braut5.jpeg",
-      "images/braut6.jpeg",
-      "images/braut7.jpeg"
-    ];
+<section id="story">
 
-    const randomColor =
-      colors[Math.floor(Math.random() * colors.length)];
+<h1>
+	Lara W goes Lara L
+</h1>
 
-    const randomImage =
-      images[Math.floor(Math.random() * images.length)];
 
-    document.body.style.backgroundColor = randomColor;
+<p>
+	Aber erst musste sie natürlich ihren JGA überstehen :-)
+</p>
 
-    document.getElementById("randomImage").src = randomImage;
 
-    function openPopup() {
-      document.getElementById("helpPopup").style.display = "flex";
-    }
+<!-- KAPITEL 1 -->
 
-    function closePopup() {
-      document.getElementById("helpPopup").style.display = "none";
-    }
-      
-  </script>
+<div class="chapter">
 
+
+<h2>
+🚨 Kapitel 1: Die Entführung
+</h2>
+
+
+<p>
+
+Es war Freitag.
+
+Ein ganz normaler Arbeitstag...
+
+Dachten zumindest alle.
+
+Denn Lara wurde offiziell
+am Arbeitsplatz "entführt".
+
+Natürlich alles in enger Absprache
+mit ihrem Chef.
+
+Der einzige Haken?
+
+Lara hatte ihrem Chef bis dahin
+gar nicht erzählt, dass sie heiratet.
+
+Naja...
+
+Die Trauzeugin war schneller. 😇
+
+</p>
+
+<div class="gallery">
+
+
+<img src="imagesout/entfuehrung1.jpg">
+
+<img src="imagesout/entfuehrung2.jpg">
+
+<img src="imagesout/entfuehrung3.jpg">
+
+
+</div>
+
+
+</div>
+
+
+</section>
+<script src="script.js"></script>
+	
 </body>
 </html>
