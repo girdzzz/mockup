@@ -85,6 +85,7 @@ img {
 .chapter {
     margin-bottom:70px;
     padding:25px;
+    border-radius:35px 35px 0 0;
     transition:background-color 0.8s ease;
 }
 
@@ -105,17 +106,12 @@ img {
     overflow-x:auto;
     scroll-snap-type:x mandatory;
     padding:10px 0;
-    scrollbar-width:none;
-}
-
-.gallery::-webkit-scrollbar {
-    display:none;
 }
 
 .gallery img {
     width:50vw;
     height:70vh;
-    max-height:600px;
+    max-height:800px;
     object-fit:contain;
     background:#fff;
     border-radius:25px;
