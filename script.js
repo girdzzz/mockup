@@ -1,66 +1,46 @@
 const colors = [
-
-"#ffd6e0",
-"#d6f5ff",
-"#fff0c2",
-"#d9ffd6",
-"#e8d6ff"
-
+  "#FFB3BA",
+  "#BAFFC9",
+  "#BAE1FF",
+  "#FFFFBA",
+  "#D5BAFF",
+  "#FFC6A5"
 ];
 
-
-const heroes = [
-
-"images/hero1.jpg",
-"images/hero2.jpg",
-"images/hero3.gif"
-
+const images = [
+  "images/gib20.png",
+  "images/mircostripper.png",
+  "images/BrustOP.png",
+  "images/COCKtail.png",
+  "images/dubisteingeladen.png",
+  "images/wuhu.png",
+  "images/brautstyling.png",
+  "images/shotspende.png",
+  "images/braut1.jpeg",
+  "images/braut2.jpeg",
+  "images/braut3.jpeg",
+  "images/braut4.jpeg",
+  "images/braut5.jpeg",
+  "images/braut6.jpeg",
+  "images/braut7.jpeg"
 ];
-
-
-const texts = [
-
-"Du glaubst das nicht? Lade die Seite nochmal 😏",
-
-"Jeder Reload zeigt ein anderes Geheimnis.",
-
-"Die Wahrheit versteckt sich zwischen den Bildern.",
-
-"Willst du wirklich alles sehen?"
-
-];
-
-
 
 document.body.style.backgroundColor =
 colors[Math.floor(Math.random()*colors.length)];
 
+document.getElementById("randomImage").src =
+images[Math.floor(Math.random()*images.length)];
 
-
-document.getElementById("heroImage").src =
-heroes[Math.floor(Math.random()*heroes.length)];
-
-
-
-document.getElementById("heroText").innerHTML =
-texts[Math.floor(Math.random()*texts.length)];
-
-
-
-
-
-function openPopup(){
-
-document.getElementById("popup")
-.style.display="flex";
-
+function openPopup() {
+  document.getElementById("helpPopup").style.display = "flex";
 }
 
-
-
-function closePopup(){
-
-document.getElementById("popup")
-.style.display="none";
-
+function continueStory(){
+  document.getElementById("popup").style.display="none";
+  document.getElementById("startScreen").style.display="none";
+  document.getElementById("story").style.display="block";
+  window.scrollTo({
+    top:0,
+    behavior:"smooth"
+  });
 }
