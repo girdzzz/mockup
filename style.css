@@ -106,6 +106,7 @@ img {
     overflow-x:auto;
     scroll-snap-type:x mandatory;
     padding:10px 0;
+    scrollbar-width:auto;
 }
 
 .gallery img {
@@ -121,8 +122,12 @@ img {
 
 .photo-card {
     width:90vw;
+    flex:0 0 90vw;
     background:white;
     border-radius:25px;
+    box-sizing:border-box;
+    box-shadow:
+            0 10px 30px rgba(0,0,0,0.12);
     padding:15px;
     flex-shrink:0;
     scroll-snap-align:center;
@@ -131,15 +136,19 @@ img {
 
 .photo-card img {
     width:100%;
-    height:55vh;
+    height:60vh;
+    max-height:650px;
     object-fit:contain;
     border-radius:20px;
+    background:#fafafa;
 }
 
 
 .photo-card p {
+    text-align:center;
     font-size:18px;
     line-height:1.4;
+    margin:20px 10px 10px;
 }
 
 
