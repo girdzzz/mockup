@@ -104,12 +104,21 @@ img {
     gap:15px;
     overflow-x:auto;
     scroll-snap-type:x mandatory;
+    padding:10px 0;
+    scrollbar-width:none;
+}
+
+.gallery::-webkit-scrollbar {
+    display:none;
 }
 
 .gallery img {
-    width:85vw;
-    height:450px;
-    object-fit:cover;
+    width:50vw;
+    height:70vh;
+    max-height:600px;
+    object-fit:contain;
+    background:#fff;
+    border-radius:25px;
     flex-shrink:0;
     scroll-snap-align:center;
 }
