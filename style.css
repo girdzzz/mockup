@@ -13,7 +13,6 @@ body {
     align-items:center;
 }
 
-
 img {
     max-width:90vw;
     max-height:60vh;
@@ -33,9 +32,14 @@ img {
     font-weight:bold;
 }
 
+.scroll-hint {
+    margin-top:30px;
+    opacity:0.6;
+    font-size:14px;
+}
+
 /* POPUP */
 .popup-overlay {
-
     display:none;
     position:fixed;
     inset:0;
@@ -44,7 +48,6 @@ img {
     align-items:center;
     z-index:10;
 }
-
 
 .popup {
     background:white;
@@ -55,13 +58,11 @@ img {
     text-align:center;
 }
 
-
 .popup img {
     width:100%;
-    max-height:250px;
+    max-height:300px;
     object-fit:cover;
 }
-
 
 .popup button {
     margin:5px;
@@ -76,31 +77,23 @@ img {
 
 /* STORY */
 #story {
-    display:none;
     background:white;
     padding:30px 20px;
     border-radius:35px 35px 0 0;
 }
 
-
-
 .chapter {
     margin-bottom:70px;
 }
-
-
 
 .chapter h2 {
     font-size:28px;
 }
 
-
-
 .chapter p {
     font-size:18px;
     line-height:1.5;
 }
-
 
 
 /* SWIPE GALERIE */
@@ -110,7 +103,6 @@ img {
     overflow-x:auto;
     scroll-snap-type:x mandatory;
 }
-
 
 .gallery img {
     width:85vw;
