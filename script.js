@@ -4,7 +4,15 @@ const colors = [
   "#BAE1FF",
   "#FFFFBA",
   "#D5BAFF",
-  "#FFC6A5"
+  "#FFC6A5",
+  "#F8D7DA", // zart rot
+  "#D4EDDA", // zart grün
+  "#D1ECF1", // türkis
+  "#FFF3CD", // creme
+  "#E2D9F3", // lavendel
+  "#FADADD", // babyrosa
+  "#CDEAC0", // salbei
+  "#FFD8A8"  // pfirsich
 ];
 
 const images = [
@@ -25,11 +33,17 @@ const images = [
   "images/braut7.jpeg"
 ];
 
-document.body.style.backgroundColor =
-colors[Math.floor(Math.random()*colors.length)];
+document.body.style.backgroundColor = colors[Math.floor(Math.random()*colors.length)];
 
-document.getElementById("randomImage").src =
-images[Math.floor(Math.random()*images.length)];
+document.getElementById("story").style.backgroundColor = colors[Math.floor(Math.random()*colors.length)];
+
+document.querySelectorAll(".chapter")
+    .forEach(chapter => {
+      chapter.style.backgroundColor =
+          colors[Math.floor(Math.random()*colors.length)];
+    });
+
+document.getElementById("randomImage").src = images[Math.floor(Math.random()*images.length)];
 
 function openPopup() {
   document.getElementById("helpPopup").style.display = "flex";
@@ -44,3 +58,4 @@ function continueStory(){
     behavior:"smooth"
   });
 }
+

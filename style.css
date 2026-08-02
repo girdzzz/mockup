@@ -77,13 +77,15 @@ img {
 
 /* STORY */
 #story {
-    background:white;
-    padding:30px 20px;
+    padding:50px 20px;
     border-radius:35px 35px 0 0;
+    transition:background-color 0.8s ease;
 }
 
 .chapter {
     margin-bottom:70px;
+    padding:25px;
+    transition:background-color 0.8s ease;
 }
 
 .chapter h2 {
