@@ -80,6 +80,8 @@ img {
     padding:50px 5px;
     border-radius:35px 35px 0 0;
     text-align:center;
+    background:#F8F5EF;
+    color:#243127;
     transition:background-color 0.8s ease;
 }
 
@@ -88,6 +90,7 @@ img {
     padding:25px;
     border-radius:35px 35px 0 0;
     overflow:hidden;
+    color:#243127;
     transition:background-color 0.8s ease;
 }
 
@@ -153,6 +156,13 @@ img {
     font-size:18px;
     line-height:1.4;
     margin:20px 10px 10px;
+}
+
+.swipe-hint {
+    text-align:center;
+    opacity:.6;
+    margin-top:10px;
+    margin-bottom:20px;
 }
 
 
