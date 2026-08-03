@@ -192,7 +192,7 @@ video {
     position:absolute;
     top:-20px;
     font-size:25px;
-    animation:fall 3s linear forwards;
+    animation:fall 6s linear forwards;
 }
 
 @keyframes fall {

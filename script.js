@@ -88,10 +88,11 @@ function launchConfetti() {
     "🥒",
     "😽",
     "🎤",
-    "🎉"
+    "🎉",
+    "💗"
   ];
 
-  for(let i = 0; i < 40; i++) {
+  for(let i = 0; i < 200; i++) {
 
     const item =
         document.createElement("div");
@@ -107,13 +108,13 @@ function launchConfetti() {
         Math.random()*100 + "%";
 
     item.style.animationDelay =
-        Math.random()*1.5 + "s";
+        Math.random()*10 + "s";
 
     container.appendChild(item);
 
     setTimeout(()=>{
       item.remove();
-    },8000);
+    },15000);
   }
 }
 
