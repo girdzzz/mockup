@@ -90,11 +90,15 @@ img {
 
 #story h1 {
     font-family:"Great Vibes", cursive;
-    font-size:clamp(42px, 12vw, 70px);
+    font-size:clamp(35px, 12vw, 70px);
     font-weight:400;
     text-align:center;
     margin-bottom:50px;
     color:#355C4D;
+}
+
+.no-break {
+    white-space: nowrap;
 }
 
 
