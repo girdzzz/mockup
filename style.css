@@ -151,6 +151,10 @@ img {
     color:#355C4D;
 }
 
+.no-break {
+    white-space: nowrap;
+}
+
 .final p {
     font-family:"Inter", sans-serif;
     font-size:19px;
